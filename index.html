@@ -1,41 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+    <!-- <title>Digital Clock Javascript | CodingNepal</title> -->
     <link rel="stylesheet" href="style.css">
-    <title>Shahobiddin Anorboyev</title>
-</head>
-<body>
-    <div class="grid-2">
-        <div class="section-1">
-            <i class="fas fa-code fa-5x white"></i>
-            <h2>Shahobiddin Anorboyev</h2>
-            <p>Samarkand,Uzbekistan.</p>
-            <a href="https://twitter.com/anorprogrammer"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/shahobiddin-anorboyev-785255204"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/anorprogrammer"><i class="fab fa-github"></i></a>
-            <a href="https://stackoverflow.com/users/17322210/shahobiddin-anorboyevr"><i class="fab fa-stack-overflow"></i></a>
-        </div>
-        <div class="section-2">
-            <h2>Haqida</h2>
-            <p>2001 yilda Samarqand viloyatida tug'ilganman. 2008-2019-yillarda Samarqand viloyatidagi 70-umumta’lim maktabida tahsil oldim. 2019-2020 yillar davomida Buxoro viloyati Qorako‘l tumanida matematika va fizika yo‘nalishida tahsil oldim. Hozirda Toshkent axborot texnologiyalari universitetining 1-bosqich talabasiman.</p>
-            <h2>Tajribalar</h2>
-            <p>Men matematika va fizika bo'yicha o'rta bilimga egaman. Men Python va C++ dasturlash tillarida yaxshi tajribaga egaman.</p>
-
-            <h2>Bilimlar</h2>
-            <p>Matematika, Fizika, Python, C++, HTML5, CSS3</p>
-            <h2>Loyihalar</h2>
-            <a href="https://github.com/anorprogrammer">Loyiha</a>
-            <a href="https://github.com/anorprogrammer">Loyiha</a>
-            <a href="https://github.com/anorprogrammer">Loyiha</a>
-            <a href="https://github.com/anorprogrammer">Loyiha</a>
-            <a href="https://github.com/anorprogrammer">Loyiha</a>
-            <h2>Contact</h2>
-            <p><a href="https://t.me/anorprogrammer">@anorprogrammer</a></p>
-        </div>
-    </div>
-</body>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="display">
+</div>
+</div>
+<script>
+      setInterval(function(){
+        const clock = document.querySelector(".display");
+        let time = new Date();
+        let sec = time.getSeconds();
+        let min = time.getMinutes();
+        let hr = time.getHours();
+        let day = 'AM';
+        if(hr > 12){
+          day = 'PM';
+          hr = hr - 12;
+        }
+        if(hr == 0){
+          hr = 12;
+        }
+        if(sec < 10){
+          sec = '0' + sec;
+        }
+        if(min < 10){
+          min = '0' + min;
+        }
+        if(hr < 10){
+          hr = '0' + hr;
+        }
+        clock.textContent = hr + ':' + min + ':' + sec + " " + day;
+      });
+    </script>
+  </body>
 </html>
