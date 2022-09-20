@@ -1,43 +1,121 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
-<html lang="en" dir="ltr">
+<html lang="en">
+
   <head>
     <meta charset="utf-8">
-    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
-    <!-- <title>Digital Clock Javascript | CodingNepal</title> -->
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Shahobiddin Anorboyev">
+    <meta name="description" content="Anorprogrammer personal website.">
+    <meta name="keywords" content="developer,personal,opensource,webrtc">
+
+    <base href="https://anorprogrammer.github.io/">
+    <title>Anorprogrammer</title>
+
+    <link rel="canonical" href="https://anorprogrammer.github.io/">
+
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="https://bettercallsaghul.com/css/style.min.css">
+
+    
+
+    
+
+    <link rel="icon" type="image/jpg" href="http://telegra.ph//file/c0b4c63efd4eff87d74ae.jpg" sizes="32x32">
+    <link rel="icon" type="image/jpg" href="http://telegra.ph//file/c0b4c63efd4eff87d74ae.jpg" sizes="16x16">
+
+    
+      <link href="https://anorprogrammer.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Shahobiddin Anorboyev" />
+      <link href="https://anorprogrammer.github.io/index.xml" rel="feed" type="application/rss+xml" title="Shahobiddin Anorboyev" />
+    
+
+    <meta name="generator" content="Hugo 0.44" />
   </head>
-  <body>
-    <div class="clock">
-      <div class="display">
-</div>
-</div>
-<script>
-      setInterval(function(){
-        const clock = document.querySelector(".display");
-        let time = new Date();
-        let sec = time.getSeconds();
-        let min = time.getMinutes();
-        let hr = time.getHours();
-        let day = 'AM';
-        if(hr > 12){
-          day = 'PM';
-          hr = hr - 12;
-        }
-        if(hr == 0){
-          hr = 12;
-        }
-        if(sec < 10){
-          sec = '0' + sec;
-        }
-        if(min < 10){
-          min = '0' + min;
-        }
-        if(hr < 10){
-          hr = '0' + hr;
-        }
-        clock.textContent = hr + ':' + min + ':' + sec + " " + day;
-      });
-    </script>
+
+  <body class="">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://anorprogrammer.github.io/">
+      Anorprogrammer
+    </a>
+    <ul class="navigation-list  float-right ">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://anorprogrammer.github.io/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://anorprogrammer.github.io/">CV</a>
+          </li>
+        
+      
+      
+        
+        
+    
+        
+          
+        
+          
+            
+              <li>
+                <p>|</p>
+              </li>
+              
+            
+            <li>
+              <a href="https://anorprogrammer.github.io/">UZ</a>
+            </li>
+          
+        
+      
+    </ul>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container centered">
+  <div class="about">
+    
+    <div class="avatar"><img src="http://telegra.ph//file/c0b4c63efd4eff87d74ae.jpg" alt="avatar"></div>
+    
+    <h1>Shahobiddin Anorboyev</h1>
+    <h2>Student at Tashkent University of Information Technologies</h2>
+    
+    <ul>
+      
+      <li><a href="https://github.com/anorprogrammer">GitHub</a></li>
+      
+      <li><a href="https://twitter.com/anorprogrammer">Twitter</a></li>
+      
+      <li><a href="https://www.linkedin.com/in/anorprogrammer/">LinkedIn</a></li>
+      
+    </ul>
+    
+  </div>
+</section>
+
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+      <p>@anorprogrammer</p>
+    
+     © 2022
+  </section>
+</footer>
+
+    </main>
+
+    
+
   </body>
+
 </html>
